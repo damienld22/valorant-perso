@@ -2,9 +2,10 @@
 
 ## To do
 
-- [ ] Choix de la carte
-- [ ] Choix du personnage avec pourcentage
 - [ ] Mettre mes préférés en premier
+- [ ] Loader
+- [ ] Couleur en fonction du score
+- [ ] Direction vers personnage detail
 
 ## Idées
 

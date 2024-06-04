@@ -3,12 +3,14 @@ import { Page } from "../components/Page/Page";
 import { Title } from "../components/Title/Title";
 import { useMap } from "../hooks/useMap";
 import { useAgents } from "../hooks/useAgents";
-import styles from "./MapDetails.module.css";
+import { useAgentScorePerMap } from "../hooks/useAgentScorePerMap";
+import { AgentStats } from "../components/AgentStats/AgentStats";
 
 export function MapDetails() {
   const { id } = useParams();
   const { data } = useMap(id as string);
   const { agents } = useAgents();
+  const { scores } = useAgentScorePerMap(data.displayName?.toLowerCase());
 
   return (
     <Page>
@@ -16,22 +18,21 @@ export function MapDetails() {
 
       <img style={{ width: "80vw" }} src={data.splash} alt={data.displayName} />
 
-      <div>
-        {agents.map((agent) => (
-          <div key={agent.uuid} className={styles.container}>
-            <div className={styles["agent-item"]}>
-              <p>{agent.displayName}</p>
-              <img
-                className={styles["agent-image"]}
-                src={agent.displayIconSmall}
-                alt={agent.displayName}
-              />
-            </div>
-
-            <p className={styles.score}>80%</p>
-          </div>
+      <>
+        {scores.map((score) => (
+          <AgentStats
+            key={score.playerName}
+            score={score}
+            agent={
+              agents.find(
+                (elt) =>
+                  elt.displayName.toLowerCase() ===
+                  score.playerName.toLowerCase()
+              )!
+            }
+          />
         ))}
-      </div>
+      </>
     </Page>
   );
 }
