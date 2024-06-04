@@ -10,16 +10,7 @@ export function useMaps() {
   });
 
   if (isSuccess) {
-    const maps = data.data.map(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (map: any) =>
-        ({
-          uuid: map.uuid,
-          displayName: map.displayName,
-          listViewIcon: map.listViewIcon,
-        } as Map)
-    ) as Map[];
-
+    const maps = data.data as Map;
     return { maps };
   } else {
     return { maps: [] };
