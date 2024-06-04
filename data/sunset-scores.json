@@ -1,0 +1,122 @@
+[
+  {
+    "playerName": "Clove",
+    "victoryPercentage": 53.6,
+    "averageScore": 241
+  },
+  {
+    "playerName": "Cypher",
+    "victoryPercentage": 51.2,
+    "averageScore": 202
+  },
+  {
+    "playerName": "Sage",
+    "victoryPercentage": 50.9,
+    "averageScore": 174
+  },
+  {
+    "playerName": "Reyna",
+    "victoryPercentage": 50.8,
+    "averageScore": 240
+  },
+  {
+    "playerName": "Gekko",
+    "victoryPercentage": 50.6,
+    "averageScore": 186
+  },
+  {
+    "playerName": "Phoenix",
+    "victoryPercentage": 50.3,
+    "averageScore": 210
+  },
+  {
+    "playerName": "Deadlock",
+    "victoryPercentage": 50.3,
+    "averageScore": 199
+  },
+  {
+    "playerName": "Killjoy",
+    "victoryPercentage": 50.1,
+    "averageScore": 188
+  },
+  {
+    "playerName": "Jett",
+    "victoryPercentage": 50,
+    "averageScore": 224
+  },
+  {
+    "playerName": "Raze",
+    "victoryPercentage": 49.9,
+    "averageScore": 230
+  },
+  {
+    "playerName": "Sova",
+    "victoryPercentage": 49.5,
+    "averageScore": 182
+  },
+  {
+    "playerName": "Fade",
+    "victoryPercentage": 49.4,
+    "averageScore": 182
+  },
+  {
+    "playerName": "Chamber",
+    "victoryPercentage": 49.1,
+    "averageScore": 220
+  },
+  {
+    "playerName": "Brimstone",
+    "victoryPercentage": 48.9,
+    "averageScore": 190
+  },
+  {
+    "playerName": "Skye",
+    "victoryPercentage": 48.8,
+    "averageScore": 185
+  },
+  {
+    "playerName": "Breach",
+    "victoryPercentage": 48.8,
+    "averageScore": 202
+  },
+  {
+    "playerName": "Neon",
+    "victoryPercentage": 48.6,
+    "averageScore": 210
+  },
+  {
+    "playerName": "Iso",
+    "victoryPercentage": 47.7,
+    "averageScore": 221
+  },
+  {
+    "playerName": "Astra",
+    "victoryPercentage": 47.7,
+    "averageScore": 211
+  },
+  {
+    "playerName": "Omen",
+    "victoryPercentage": 47.6,
+    "averageScore": 205
+  },
+  {
+    "playerName": "Yoru",
+    "victoryPercentage": 47.6,
+    "averageScore": 203
+  },
+  {
+    "playerName": "Viper",
+    "victoryPercentage": 47.1,
+    "averageScore": 186
+  },
+  {
+    "playerName": "KAY/O",
+    "victoryPercentage": 47,
+    "averageScore": 191
+  },
+  {
+    "playerName": "Harbor",
+    "victoryPercentage": 45.8,
+    "averageScore": 190
+  }
+]
