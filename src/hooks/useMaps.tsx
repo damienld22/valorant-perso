@@ -10,7 +10,7 @@ export function useMaps() {
   });
 
   if (isSuccess) {
-    const maps = data.data as Map;
+    const maps = data.data as Map[];
     return { maps };
   } else {
     return { maps: [] };
