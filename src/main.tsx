@@ -8,16 +8,21 @@ import { MapDetails } from "./views/MapDetails.tsx";
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: Maps,
+    },
+    {
+      path: "/maps/:id",
+      Component: MapDetails,
+    },
+  ],
   {
-    path: "/",
-    Component: Maps,
-  },
-  {
-    path: "/maps/:id",
-    Component: MapDetails,
-  },
-]);
+    basename: "/valorant-perso",
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
