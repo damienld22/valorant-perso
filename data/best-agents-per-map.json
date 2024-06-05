@@ -1,0 +1,19 @@
+{
+  "ascent": ["Sova", "Omen", "Jett", "Cypher", "KAY/O", "Killjoy"],
+  "bind": ["Brimstone", "Raze", "Skye", "Cypher", "Sage", "Viper"],
+  "split": ["Killjoy", "Raze", "Jett", "Omen", "Sage", "Skye", "Viper"],
+  "breeze": ["Viper", "Skye", "Jett", "Harbor", "Cypher"],
+  "icebox": ["Viper", "Sova", "Jett", "Omen", "Cypher", "Raze", "Sage"],
+  "lotus": [
+    "Astra",
+    "Sova",
+    "Jett",
+    "Omen",
+    "Cypher",
+    "Fade",
+    "Killjoy",
+    "Raze",
+    "Viper"
+  ],
+  "sunset": ["Harbor", "Jett", "Skye", "Raze", "Omen", "Killjoy"]
+}
