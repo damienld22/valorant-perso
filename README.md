@@ -2,11 +2,8 @@
 
 ## To do
 
-- [ ] Mettre mes préférés en premier
 - [ ] Loader
-- [ ] Couleur en fonction du score
 - [ ] Direction vers personnage detail
-- [ ] Filtre sur le type de personnage
 
 ## Idées
 

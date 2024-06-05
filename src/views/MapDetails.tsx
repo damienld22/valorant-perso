@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import { Page } from "../components/Page/Page";
-import { Title } from "../components/Title/Title";
 import { useMap } from "../hooks/useMap";
 import { useAgents } from "../hooks/useAgents";
 import { useAgentScorePerMap } from "../hooks/useAgentScorePerMap";
 import { AgentStats } from "../components/AgentStats/AgentStats";
 import { useState } from "react";
+import { useProposedAgentPerMap } from "../hooks/useProposedAgentPerMap";
+import styles from "./MapDetails.module.css";
 
 export function MapDetails() {
   const { id } = useParams();
@@ -13,11 +14,12 @@ export function MapDetails() {
   const { agents } = useAgents();
   const { scores } = useAgentScorePerMap(data.displayName?.toLowerCase());
   const [typeFilter, setTypeFilter] = useState("all");
+  const { agents: bestAgents } = useProposedAgentPerMap(
+    data.displayName?.toLowerCase()
+  );
 
   return (
-    <Page>
-      <Title title={data.displayName} />
-
+    <Page title={data.displayName} withBackButton>
       <img style={{ width: "80vw" }} src={data.splash} alt={data.displayName} />
 
       <label htmlFor="select-type">Choix type</label>
@@ -36,6 +38,8 @@ export function MapDetails() {
         )}
       </select>
 
+      <p className={styles.legend}>&#11088; : Joueur préconisé pour la map</p>
+
       <>
         {scores.length > 0 &&
           agents
@@ -43,9 +47,22 @@ export function MapDetails() {
               (elt) =>
                 elt.role.displayName === typeFilter || typeFilter === "all"
             )
+            .sort((a, b) => {
+              const scoreA = scores.find(
+                (elt) =>
+                  elt.playerName.toLowerCase() === a.displayName.toLowerCase()
+              )!;
+              const scoreB = scores.find(
+                (elt) =>
+                  elt.playerName.toLowerCase() === b.displayName.toLowerCase()
+              )!;
+
+              return scoreB.victoryPercentage - scoreA.victoryPercentage;
+            })
             .map((agent) => (
               <AgentStats
                 key={agent.uuid}
+                isBest={bestAgents.includes(agent.displayName)}
                 score={
                   scores.find(
                     (elt) =>
